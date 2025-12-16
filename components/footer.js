@@ -1,107 +1,95 @@
-class CustomNavbar extends HTMLElement {
+class CustomFooter extends HTMLElement {
   connectedCallback() {
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.innerHTML = `
       <style>
         :host {
           display: block;
-          width: 100%;
-          position: fixed;
-          top: 0;
-          left: 0;
-          z-index: 1000;
-          background-color: white;
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          background-color: #0F172A;
+          color: white;
+          padding: 3rem 2rem;
         }
         
-        .navbar-container {
+        .footer-container {
           max-width: 1200px;
           margin: 0 auto;
-          padding: 1rem 2rem;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 2rem;
         }
         
-        .logo {
+        .footer-logo {
           font-size: 1.5rem;
           font-weight: 700;
-          color: #0F172A;
-          text-decoration: none;
+          margin-bottom: 1rem;
+          display: block;
         }
         
-        .nav-links {
+        .footer-tagline {
+          color: #94A3B8;
+          margin-bottom: 1.5rem;
+        }
+        
+        .footer-links {
           display: flex;
-          gap: 2rem;
-          align-items: center;
+          flex-direction: column;
+          gap: 0.75rem;
         }
         
-        .nav-link {
-          color: #334155;
+        .footer-link {
+          color: #E2E8F0;
           text-decoration: none;
-          font-weight: 500;
           transition: color 0.3s;
         }
         
-        .nav-link:hover {
-          color: #1E40AF;
+        .footer-link:hover {
+          color: #F59E0B;
         }
         
-        .cta-button {
-          background-color: #F59E0B;
-          color: #0F172A;
-          padding: 0.5rem 1.5rem;
-          border-radius: 9999px;
-          font-weight: 600;
-          transition: all 0.3s;
-        }
-        
-        .cta-button:hover {
-          background-color: #EAB308;
-          transform: translateY(-2px);
-        }
-        
-        .mobile-menu-button {
-          display: none;
-          background: none;
-          border: none;
-          cursor: pointer;
+        .copyright {
+          margin-top: 3rem;
+          text-align: center;
+          color: #64748B;
+          font-size: 0.875rem;
         }
         
         @media (max-width: 768px) {
-          .nav-links {
-            display: none;
-          }
-          
-          .mobile-menu-button {
-            display: block;
+          .footer-container {
+            grid-template-columns: 1fr;
           }
         }
       </style>
       
-      <div class="navbar-container">
-        <a href="#" class="logo">EnergiaFuncional</a>
-        
-        <div class="nav-links">
-          <a href="#" class="nav-link">Início</a>
-          <a href="#metodo" class="nav-link">O Método</a>
-          <a href="#diagnostico" class="nav-link">Diagnóstico</a>
-          <a href="#para-quem" class="nav-link">Para Quem É</a>
-          <a href="#contato" class="nav-link">Contato</a>
-          <a href="#diagnostico" class="cta-button">Iniciar Diagnóstico</a>
+      <div class="footer-container">
+        <div>
+          <a href="#" class="footer-logo">EnergiaFuncional</a>
+          <p class="footer-tagline">Método prático para adultos funcionais cansados</p>
         </div>
         
-        <button class="mobile-menu-button">
-          <i data-feather="menu"></i>
-        </button>
+        <div>
+          <h3 class="font-semibold mb-4">Links</h3>
+          <div class="footer-links">
+            <a href="#" class="footer-link">Início</a>
+            <a href="#metodo" class="footer-link">O Método</a>
+            <a href="#diagnostico" class="footer-link">Diagnóstico</a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="font-semibold mb-4">Legal</h3>
+          <div class="footer-links">
+            <a href="#" class="footer-link">Termos</a>
+            <a href="#" class="footer-link">Privacidade</a>
+            <a href="#contato" class="footer-link">Contato</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        &copy; 2025 EnergiaFuncional. Todos os direitos reservados.
       </div>
     `;
-    
-    // Initialize feather icons
-    if (window.feather) {
-      window.feather.replace();
-    }
   }
 }
 
-customElements.define('custom-navbar', CustomNavbar);
+customElements.define('custom-footer', CustomFooter);
