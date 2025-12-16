@@ -82,9 +82,7 @@ class CustomNavbar extends HTMLElement {
       <div class="navbar-container">
         <a href="#" class="logo">
           <img 
-            src="../images/logo-energiafuncional.png" 
-            alt="EnergiaFuncional" 
-            style="height:32px;"
+            src="../images/logo-energiafuncional.png"         
           >
         </a>
         
