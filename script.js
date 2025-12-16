@@ -1,42 +1,34 @@
-// Importa os Web Components
-import "./components/navbar.js";
-import "./components/footer.js";
-
-// Smooth scrolling para âncoras internas
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
-        }
+        });
     });
-});
 
-// Animação de seções ao rolar a página
-const animateOnScroll = () => {
-    const sections = document.querySelectorAll('section');
-    const windowHeight = window.innerHeight;
+    // Animate sections on scroll
+    const animateOnScroll = function() {
+        const sections = document.querySelectorAll('section');
+        
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if (sectionTop < windowHeight - 100) {
+                section.classList.add('animate-fade-in');
+            }
+        });
+    };
 
-    sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
+    // Initial check
+    animateOnScroll();
+    
+    // Check on scroll
+    window.addEventListener('scroll', animateOnScroll);
 
-        if (sectionTop < windowHeight - 100) {
-            section.classList.add('animate-fade-in');
-        }
-    });
-};
-
-// Executa na carga inicial
-animateOnScroll();
-
-// Executa ao rolar
-window.addEventListener('scroll', animateOnScroll);
-
-// Feather Icons (centralizado aqui)
-if (window.feather) {
+    // Feather icons replacement
     feather.replace();
-}
+});
