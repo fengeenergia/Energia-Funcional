@@ -30,7 +30,7 @@ class CustomNavbar extends HTMLElement {
         }
 
         .logo img {
-          height: 32px;
+          height: 48px;
           width: auto;
           display: block;
         }
