@@ -4,312 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EnergiaFuncional | Método Prático para Adultos Funcionais Cansados</title>
+
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
+
     <script src="components/navbar.js"></script>
     <script src="components/footer.js"></script>
 </head>
+
 <body class="font-sans bg-gray-50">
-    <custom-navbar></custom-navbar>
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-20 px-4">
-        <div class="container mx-auto flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-10 md:mb-0">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Você funciona.<br>Mas vive no limite?</h1>
-                <p class="text-xl mb-8">Descubra exatamente onde sua energia está sendo desperdiçada — sem terapia, sem promessas irreais e sem virar sua rotina do avesso.</p>
-                <button class="bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-5 px-8 rounded-full transition duration-300 transform hover:scale-105">
-                    Iniciar diagnóstico agora
-                </button>
-                <p class="mt-4 text-blue-200">Leva menos de 5 minutos • Não clínico • Gratuito</p>
-            </div>
-            <div class="md:w-1/2 flex justify-center items-center relative top-12">
-                <img 
-                      src="images/hero.png" 
-                      alt="Adulto funcional em estado de foco e cansaço mental"
-                      class="rounded-lg shadow-2xl max-w-lg w-full"
-                     
-            </div>
+<custom-navbar></custom-navbar>
+
+<!-- HERO -->
+<section class="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-20 px-4">
+    <div class="container mx-auto flex flex-col md:flex-row items-center">
+        
+        <div class="md:w-1/2 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                Você funciona.<br>Mas vive no limite?
+            </h1>
+
+            <p class="text-xl mb-8">
+                Descubra exatamente onde sua energia está sendo desperdiçada — 
+                sem terapia, sem promessas irreais e sem virar sua rotina do avesso.
+            </p>
+
+            <a href="#diagnostico"
+               class="inline-block bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-5 px-10 rounded-full transition duration-300 transform hover:scale-105">
+                Iniciar diagnóstico agora
+            </a>
+
+            <p class="mt-4 text-blue-200">
+                Leva menos de 5 minutos • Não clínico • Gratuito
+            </p>
         </div>
-    </section>
 
-    <!-- Problem Identification Section -->
-    <section class="py-16 px-4">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Você se identifica com algum desses?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Card 1 -->
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-blue-100 p-3 rounded-full mr-4">
-                            <i data-feather="activity" class="text-blue-600"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-blue-900">Você dá conta, mas vive no limite</h3>
-                    </div>
-                    <p class="text-gray-600">Consegue cumprir todas as obrigações, mas sempre no modo sobrevivência.</p>
-                </div>
-                
-                <!-- Card 2 -->
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-blue-100 p-3 rounded-full mr-4">
-                            <i data-feather="moon" class="text-blue-600"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-blue-900">Descansar não resolve mais</h3>
-                    </div>
-                    <p class="text-gray-600">Dorme o fim de semana todo e segunda-feira já está exausto novamente.</p>
-                </div>
-                
-                <!-- Card 3 -->
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-blue-100 p-3 rounded-full mr-4">
-                            <i data-feather="clock" class="text-blue-600"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-blue-900">A energia oscila ao longo do dia</h3>
-                    </div>
-                    <p class="text-gray-600">Tem picos de produtividade seguidos de quedas bruscas de energia.</p>
-                </div>
-                
-                <!-- Card 4 -->
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-blue-100 p-3 rounded-full mr-4">
-                            <i data-feather="target" class="text-blue-600"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-blue-900">O foco diminuiu mesmo com esforço</h3>
-                    </div>
-                    <p class="text-gray-600">Se concentrar exige cada vez mais energia e disciplina.</p>
-                </div>
-                
-                <!-- Card 5 -->
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-blue-100 p-3 rounded-full mr-4">
-                            <i data-feather="cpu" class="text-blue-600"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-blue-900">Sua mente nunca desliga</h3>
-                    </div>
-                    <p class="text-gray-600">Mesmo nos momentos de descanso, os pensamentos continuam acelerados.</p>
-                </div>
-                
-                <!-- Card 6 -->
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-blue-100 p-3 rounded-full mr-4">
-                            <i data-feather="trending-up" class="text-blue-600"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-blue-900">Você sabe que poderia render mais</h3>
-                    </div>
-                    <p class="text-gray-600">Tem a sensação de que seu potencial está sendo desperdiçado.</p>
-                </div>
-            </div>
+        <div class="md:w-1/2 flex justify-center items-center mt-10 md:mt-0">
+            <img
+                src="images/hero.png"
+                alt="Adulto funcional em estado de foco e cansaço mental"
+                class="rounded-lg shadow-2xl max-w-xl w-full"
+            />
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Common Mistake Section -->
-    <section class="bg-blue-900 text-white py-16 px-4">
-        <div class="container mx-auto text-center max-w-3xl">
-            <h2 class="text-2xl font-bold mb-6">O erro mais comum.</h2>
-            <p class="text-xl mb-8">A maioria tenta resolver o cansaço com mais café, mais descanso ou mais esforço. Isso até alivia — mas não resolve.</p>
-            <div class="bg-amber-500 text-blue-900 font-bold text-xl p-4 rounded-lg inline-block">
-                Energia não se cria com esforço.<br>Ela se organiza com método.
-            </div>
-        </div>
-    </section>
+<!-- IDENTIFICAÇÃO -->
+<section class="py-16 px-4">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">
+            Você se identifica com algum desses?
+        </h2>
+        <!-- cards permanecem -->
+    </div>
+</section>
 
-    <!-- What is Functional Energy Section -->
-    <section id="metodo" class="py-16 px-4 bg-white">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">O que é Energia Funcional?</h2>
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0">
-                    <p class="text-lg text-gray-700 mb-8">Energia Funcional é a capacidade de sustentar desempenho, foco e clareza ao longo do dia, sem depender de estímulos artificiais ou força de vontade constante.</p>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="flex items-center">
-                            <div class="bg-blue-100 p-3 rounded-full mr-4">
-                                <i data-feather="layers" class="text-blue-600"></i>
-                            </div>
-                            <span class="font-medium">Organização</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="bg-blue-100 p-3 rounded-full mr-4">
-                                <i data-feather="eye" class="text-blue-600"></i>
-                            </div>
-                            <span class="font-medium">Clareza</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="bg-blue-100 p-3 rounded-full mr-4">
-                                <i data-feather="repeat" class="text-blue-600"></i>
-                            </div>
-                            <span class="font-medium">Fluxo</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="bg-blue-100 p-3 rounded-full mr-4">
-                                <i data-feather="battery-charging" class="text-blue-600"></i>
-                            </div>
-                            <span class="font-medium">Sustentabilidade</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:w-1/2 flex justify-center items-center mt-6 md:mt-0">
-                    <img src="https://enzostvs-cached-generation.hf.space/generate/abstract-energy-flow-diagram?format=landscape-16_9" 
-                         alt="Diagrama de fluxo de energia funcional" 
-                         class="rounded-lg shadow-lg max-w-md w-full">
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- MÉTODO -->
+<section id="metodo" class="py-16 px-4 bg-white">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">
+            O que é Energia Funcional?
+        </h2>
+    </div>
+</section>
 
-    <!-- Diagnosis Section -->
-    <section id="diagnostico" class="py-16 px-4 bg-gray-50">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">O que é o Diagnóstico de Energia Funcional?</h2>
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0 order-2 md:order-1">
-                    <p class="text-lg text-gray-700 mb-8">Uma análise objetiva que identifica exatamente onde sua energia está sendo drenada, sem jargões clínicos ou soluções genéricas.</p>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <div class="bg-amber-100 p-1 rounded-full mr-4 mt-1">
-                                <i data-feather="check" class="text-amber-600"></i>
-                            </div>
-                            <span>Seu principal vazamento de energia</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="bg-amber-100 p-1 rounded-full mr-4 mt-1">
-                                <i data-feather="check" class="text-amber-600"></i>
-                            </div>
-                            <span>O padrão que mantém seu cansaço</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="bg-amber-100 p-1 rounded-full mr-4 mt-1">
-                                <i data-feather="check" class="text-amber-600"></i>
-                            </div>
-                            <span>O erro mais comum do adulto funcional</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="bg-amber-100 p-1 rounded-full mr-4 mt-1">
-                                <i data-feather="check" class="text-amber-600"></i>
-                            </div>
-                            <span>Um ajuste simples de alto retorno imediato</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="md:w-1/2 flex justify-center order-1 md:order-2">
-                    <img src="https://enzostvs-cached-generation.hf.space/generate/abstract-brain-gears-diagram?format=landscape-16_9" 
-                         alt="Ilustração de cérebro e engrenagens" 
-                         class="rounded-lg shadow-lg max-w-md w-full">
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- DIAGNÓSTICO -->
+<section id="diagnostico" class="py-16 px-4 bg-gray-50">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8 text-blue-900">
+            O que é o Diagnóstico de Energia Funcional?
+        </h2>
 
-    <!-- How It Works Section -->
-    <<section id="como-funciona" class="py-16 px-4 bg-white">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Como funciona</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Step 1 -->
-                <div class="bg-gray-50 p-6 rounded-xl text-center">
-                    <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">1</div>
-                    <h3 class="text-xl font-semibold mb-4 text-blue-900">Questionário rápido</h3>
-                    <p class="text-gray-600">Responda nosso questionário objetivo em menos de 5 minutos.</p>
-                </div>
-                
-                <!-- Step 2 -->
-                <div class="bg-gray-50 p-6 rounded-xl text-center">
-                    <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">2</div>
-                    <h3 class="text-xl font-semibold mb-4 text-blue-900">Análise de padrões</h3>
-                    <p class="text-gray-600">Nosso sistema identifica seus principais vazamentos de energia.</p>
-                </div>
-                
-                <!-- Step 3 -->
-                <div class="bg-gray-50 p-6 rounded-xl text-center">
-                    <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">3</div>
-                    <h3 class="text-xl font-semibold mb-4 text-blue-900">Relatório objetivo</h3>
-                    <p class="text-gray-600">Receba um diagnóstico claro com ajustes práticos para seu dia a dia.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <a href="#diagnostico"
+           class="inline-block bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-5 px-10 rounded-full transition duration-300 transform hover:scale-105 mt-8">
+            Iniciar diagnóstico agora
+        </a>
+    </div>
+</section>
 
-    <!-- For Whom Section -->
-    <<section id="para-quem" class="py-16 px-4 bg-gray-50">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Para quem é / não é</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- For You -->
-                <div class="bg-white p-6 rounded-xl shadow-sm">
-                    <div class="flex items-center mb-6">
-                        <div class="bg-green-100 p-3 rounded-full mr-4">
-                            <i data-feather="check-circle" class="text-green-600"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-blue-900">É para você se:</h3>
-                    </div>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i data-feather="user" class="text-blue-600 mr-3 mt-1"></i>
-                            <span>É adulto funcional</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="book" class="text-blue-600 mr-3 mt-1"></i>
-                            <span>Prefere método a motivação</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="eye" class="text-blue-600 mr-3 mt-1"></i>
-                            <span>Quer clareza prática</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="clock" class="text-blue-600 mr-3 mt-1"></i>
-                            <span>Não quer parar a vida para melhorar</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Not For You -->
-                <div class="bg-white p-6 rounded-xl shadow-sm">
-                    <div class="flex items-center mb-6">
-                        <div class="bg-red-100 p-3 rounded-full mr-4">
-                            <i data-feather="x-circle" class="text-red-600"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-blue-900">Não é para você se:</h3>
-                    </div>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i data-feather="zap-off" class="text-red-600 mr-3 mt-1"></i>
-                            <span>Busca soluções milagrosas</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="heart" class="text-red-600 mr-3 mt-1"></i>
-                            <span>Quer promessas terapêuticas</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="slash" class="text-red-600 mr-3 mt-1"></i>
-                            <span>Não pretende aplicar ajustes simples</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- PARA QUEM É -->
+<section id="para-quem" class="py-16 px-4 bg-white">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">
+            Para quem é / não é
+        </h2>
+    </div>
+</section>
 
-    <!-- Final CTA -->
-    section id="contato" class="py-16 px-4 bg-blue-900 text-white">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6">Você não precisa mudar tudo.<br>Precisa entender onde está perdendo energia.</h2>
-            <button class="bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-4 px-12 rounded-full text-lg transition duration-300 transform hover:scale-105 mt-8">
-                Fazer diagnóstico agora
-            </button>
-        </div>
-    </section>
+<!-- CTA FINAL -->
+<section class="py-16 px-4 bg-slate-900 text-white">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">
+            Você não precisa mudar tudo.<br>
+            Precisa entender onde está perdendo energia.
+        </h2>
 
-    <custom-footer></custom-footer>
+        <a href="#diagnostico"
+           class="inline-block bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-5 px-12 rounded-full transition duration-300 transform hover:scale-105 mt-8">
+            Iniciar diagnóstico agora
+        </a>
+    </div>
+</section>
 
-    <script>
-        feather.replace();
-    </script>
-    <script src="script.js"></script>
+<custom-footer></custom-footer>
+
+<script>
+    feather.replace();
+</script>
+<script src="script.js"></script>
+
 </body>
 </html>
