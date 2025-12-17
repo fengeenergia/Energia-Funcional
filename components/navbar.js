@@ -97,7 +97,6 @@ class CustomNavbar extends HTMLElement {
           <a href="#metodo" class="nav-link">O Método</a>
           <a href="#diagnostico" class="nav-link">Diagnóstico</a>
           <a href="#para-quem" class="nav-link">Para Quem É</a>
-          <a href="#contato" class="nav-link">Contato</a>
           <a href="#diagnostico" class="cta-button">Iniciar Diagnóstico</a>
         </div>
 
