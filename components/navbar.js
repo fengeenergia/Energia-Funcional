@@ -88,9 +88,8 @@ class CustomNavbar extends HTMLElement {
       <div class="navbar-container">
         <a href="#" class="logo">
           <img
-            src="../images/logo-energiafuncional.png"
-            alt="EnergiaFuncional"
-          >
+            src="images/logo-energiafuncional.png"
+            >
         </a>
 
         <div class="nav-links">
@@ -108,7 +107,6 @@ class CustomNavbar extends HTMLElement {
       </div>
     `;
 
-    // Inicializa Feather Icons APÓS o DOM do componente existir
     if (window.feather) {
       feather.replace();
     }
