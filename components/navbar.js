@@ -97,7 +97,13 @@ class CustomNavbar extends HTMLElement {
           <a href="#metodo" class="nav-link">O Método</a>
           <a href="#diagnostico" class="nav-link">Diagnóstico</a>
           <a href="#para-quem" class="nav-link">Para Quem É</a>
-          <a href="#diagnostico" class="cta-button">Iniciar Diagnóstico</a>
+          <a 
+              href="https://forms.gle/7ZYaSTi7wm4VovKA6"
+              target="_blank"
+              class="cta-button"
+            >
+              Iniciar diagnóstico
+            </a>
         </div>
 
         <button class="mobile-menu-button" aria-label="Abrir menu">
