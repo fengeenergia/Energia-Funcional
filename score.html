@@ -8,20 +8,34 @@
 </head>
 <body>
 
+  <!-- Navbar -->
   <div id="navbar"></div>
 
   <main style="max-width:800px; margin:60px auto; padding:0 20px; font-family:Arial, Helvetica, sans-serif;">
 
     <h1>Score de Energia Funcional</h1>
 
-    <!-- Bloco dinâmico do score -->
+    <!-- Bloco dinâmico: score do usuário -->
     <div id="scoreUsuario"
          style="
            background:#f1f5f9;
            padding:20px;
            border-radius:8px;
-           margin:30px 0;
+           margin:30px 0 20px 0;
            font-size:18px;
+           line-height:1.6;
+           display:none;
+         ">
+    </div>
+
+    <!-- Bloco dinâmico: interpretação personalizada -->
+    <div id="interpretacaoScore"
+         style="
+           background:#ffffff;
+           border-left:4px solid #0f766e;
+           padding:20px;
+           border-radius:6px;
+           margin:0 0 40px 0;
            line-height:1.6;
            display:none;
          ">
@@ -59,22 +73,75 @@
 
   </main>
 
+  <!-- Footer -->
   <div id="footer"></div>
 
+  <!-- Script global do site -->
   <script src="script.js"></script>
 
+  <!-- Script específico do score -->
   <script>
     const params = new URLSearchParams(window.location.search);
-    const valor = params.get("valor");
+    const valor = parseInt(params.get("valor"), 10);
     const nivel = params.get("nivel");
 
-    if (valor && nivel) {
-      const box = document.getElementById("scoreUsuario");
-      box.style.display = "block";
-      box.innerHTML = `
+    if (!isNaN(valor) && nivel) {
+
+      // Exibe score do usuário
+      const boxScore = document.getElementById("scoreUsuario");
+      boxScore.style.display = "block";
+      boxScore.innerHTML = `
         <strong>Seu score de energia:</strong> ${valor}/100<br>
         <strong>Nível identificado:</strong> ${nivel}
       `;
+
+      // Exibe interpretação conforme a faixa
+      const boxInterpretacao = document.getElementById("interpretacaoScore");
+      let texto = "";
+
+      if (valor <= 30) {
+        texto = `
+          <strong>Interpretação do seu resultado</strong><br><br>
+          Seu score indica um nível crítico de energia funcional.
+          Isso normalmente significa que sua energia está sendo drenada
+          mais rápido do que está sendo recuperada, gerando sensação
+          frequente de cansaço, sobrecarga e baixa clareza ao longo do dia.<br><br>
+          O foco inicial aqui não é produzir mais, mas reduzir vazamentos
+          e reorganizar prioridades básicas.
+        `;
+      } else if (valor <= 55) {
+        texto = `
+          <strong>Interpretação do seu resultado</strong><br><br>
+          Seu score indica que sua energia não está esgotada, mas está
+          sendo mal distribuída ao longo do dia.
+          Geralmente isso ocorre quando tarefas importantes competem
+          com demandas secundárias, gerando desgaste antes do fim do dia.<br><br>
+          Pequenos ajustes na organização e no ritmo já geram melhora
+          significativa nesse nível.
+        `;
+      } else if (valor <= 75) {
+        texto = `
+          <strong>Interpretação do seu resultado</strong><br><br>
+          Seu score indica que sua energia está funcional e relativamente
+          bem distribuída.
+          Você consegue manter desempenho ao longo do dia, mas ainda
+          existem pontos de desperdício que impedem uma performance
+          mais consistente e sustentável.<br><br>
+          Aqui o foco é refinar, não corrigir falhas graves.
+        `;
+      } else {
+        texto = `
+          <strong>Interpretação do seu resultado</strong><br><br>
+          Seu score indica um nível elevado de organização energética.
+          Sua energia está bem distribuída, com clareza de prioridades
+          e boa sustentação ao longo do dia.<br><br>
+          O desafio neste nível é manter consistência e evitar regressões
+          causadas por sobrecarga ou acúmulo de tarefas.
+        `;
+      }
+
+      boxInterpretacao.style.display = "block";
+      boxInterpretacao.innerHTML = texto;
     }
   </script>
 
