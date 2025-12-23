@@ -8,12 +8,24 @@
 </head>
 <body>
 
-  <!-- Navbar (reutiliza a mesma do site) -->
   <div id="navbar"></div>
 
   <main style="max-width:800px; margin:60px auto; padding:0 20px; font-family:Arial, Helvetica, sans-serif;">
 
     <h1>Score de Energia Funcional</h1>
+
+    <!-- Bloco dinâmico do score -->
+    <div id="scoreUsuario"
+         style="
+           background:#f1f5f9;
+           padding:20px;
+           border-radius:8px;
+           margin:30px 0;
+           font-size:18px;
+           line-height:1.6;
+           display:none;
+         ">
+    </div>
 
     <p>
       O Score de Energia Funcional é uma métrica de 0 a 100 que representa
@@ -47,9 +59,24 @@
 
   </main>
 
-  <!-- Footer (reutiliza o mesmo do site) -->
   <div id="footer"></div>
 
   <script src="script.js"></script>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const valor = params.get("valor");
+    const nivel = params.get("nivel");
+
+    if (valor && nivel) {
+      const box = document.getElementById("scoreUsuario");
+      box.style.display = "block";
+      box.innerHTML = `
+        <strong>Seu score de energia:</strong> ${valor}/100<br>
+        <strong>Nível identificado:</strong> ${nivel}
+      `;
+    }
+  </script>
+
 </body>
 </html>
