@@ -98,7 +98,7 @@ class CustomNavbar extends HTMLElement {
           <a href="#diagnostico" class="nav-link">Diagnóstico</a>
           <a href="#para-quem" class="nav-link">Para Quem É</a>
           <a 
-              href="https://forms.gle/7ZYaSTi7wm4VovKA6"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSctxGpjMasH6LqEHL2bnBhobaWsT7BhQkFZuvnbjRtqR7Zd8Q/viewform?usp=header"
               target="_blank"
               class="cta-button"
             >
